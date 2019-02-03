@@ -1,0 +1,22 @@
+/*  题目描述的是去除一个数组中等于给定target的元素，将所有不等于的元素原位移到数组的前n个
+    如：[1,2,3,3,4,5,6] target = 3 -> [1,2,4,5,6] return 5;
+*/
+
+
+//  Method1:
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int newlen = 0;
+        
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[newlen] = nums[i];
+                newlen++;
+            }
+        }
+        
+        return newlen;
+    }
+}
+
+//
